@@ -1,34 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
 :root {
-  --secondary: #12bca2;
-  --primary: #6d15df;
-}
-h1,h2,h3 {
-  margin: 0;
+--primary: #6d15df;
+--secondary: #12bca2;
+--background: #f2f2f2;
+--text: #333;
+--white: #fff;
 }
 
+* {
+  box-sizing: border-box;
+  }
+
 body {
-  margin: 0;
-  color: #333;
-  font-family: 'Poppins';
-  background: #f2f2f2;
+margin: 0;
+color: var(--text);
+font-family: 'Poppins', sans-serif;
+background: var(--background);
 }
+
+h1,
+h2,
+h3 {
+margin: 0;
+}
+
+/* Navigation */
 nav {
-  background: var(--primary);
-  padding: 10px 20px;
-  text-align: center;
+background: var(--primary);
+padding: 20px;
+text-align: center;
 }
-nav a {
-  color: #f2f2f2;
-  margin: 10px;
-  display: inline-block;
-}
+
 nav h1 {
-  color: #fff;
+color: var(--white);
+margin-bottom: 10px;
 }
+
+nav a {
+color: var(--white);
+margin: 10px;
+display: inline-block;
+text-decoration: none;
+font-weight: 500;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+/* Pages */
 .page {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+max-width: 1200px;
+margin: 20px auto;
+padding: 20px;
+}
+
+/* Smoothie grid */
+.smoothie-grid {
+margin-top: 40px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 40px;
+}
+
+/* Smoothie card */
+.smoothie-card {
+position: relative;
+background: var(--white);
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+padding: 30px 20px 20px;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.smoothie-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.smoothie-card h3 {
+margin-bottom: 10px;
+color: var(--primary);
+}
+
+.smoothie-card p {
+line-height: 1.6;
+margin-bottom: 20px;
+}
+
+/* Rating */
+.smoothie-card .rating {
+color: var(--white);
+font-size: 16px;
+font-weight: 600;
+position: absolute;
+top: -10px;
+right: 15px;
+background: var(--primary);
+border-radius: 6px;
+padding: 8px 12px;
+min-width: 45px;
+text-align: center;
 }
